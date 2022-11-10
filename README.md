@@ -42,6 +42,8 @@ https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/X-Frame-Options
 
 <img width="589" alt="image" src="https://user-images.githubusercontent.com/44897118/200705322-8bfee496-8d29-4473-a1b3-a446176564f6.png">
 
+上記オプションがついているとレスポンス自体は200で帰ってくるが、ページ内に描画しないようブラウザが動いてくれる。
+
 
 ### ktorの場合
 
